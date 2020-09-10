@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 final class Filters: Codable {
     var drinks: [FiltersData]
 }
