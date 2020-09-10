@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CocktailsTableViewCell" customModule="TestProject" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CocktailsTableViewCellID" rowHeight="88" id="KGk-i7-Jjw" userLabel="Cocktails Table View Cell" customClass="CocktailsTableViewCell" customModule="TestProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U7A-Jb-N1x" userLabel="Cocktail Image">
+                        <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="R1P-sM-U2B"/>
+                            <constraint firstAttribute="width" constant="90" id="VG2-ve-SsT"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CVH-xP-4DC" userLabel="Cocktail Name">
+                        <rect key="frame" x="98" y="35" width="214" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="CVH-xP-4DC" secondAttribute="trailing" constant="8" id="3P8-Ql-OMA"/>
+                    <constraint firstItem="U7A-Jb-N1x" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7SN-0P-z8t"/>
+                    <constraint firstAttribute="bottom" secondItem="U7A-Jb-N1x" secondAttribute="bottom" id="NCA-l4-CHT"/>
+                    <constraint firstItem="CVH-xP-4DC" firstAttribute="leading" secondItem="U7A-Jb-N1x" secondAttribute="trailing" constant="8" id="aJe-DQ-Esv"/>
+                    <constraint firstAttribute="bottom" secondItem="CVH-xP-4DC" secondAttribute="bottom" constant="34" id="ai4-zs-5mR"/>
+                    <constraint firstItem="U7A-Jb-N1x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="awb-th-GSe"/>
+                    <constraint firstItem="CVH-xP-4DC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="nUf-ME-FVO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cocktailImage" destination="U7A-Jb-N1x" id="cVh-aN-aqm"/>
+                <outlet property="cocktailName" destination="CVH-xP-4DC" id="bDj-Yy-cXh"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="111.16071428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
