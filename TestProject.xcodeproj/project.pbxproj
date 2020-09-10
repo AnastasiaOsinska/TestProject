@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		289B6C147E527D086363E833 /* Pods_TestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C05788233D5DC7C04F7751 /* Pods_TestProject.framework */; };
 		390BB90A250A419400B7ECC8 /* NSError+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BB909250A419400B7ECC8 /* NSError+extension.swift */; };
-		397F7FB125028AE80064E61E /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F7FB025028AE80064E61E /* ImageManager.swift */; };
 		397F7FB5250382F20064E61E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F7FB3250382F20064E61E /* FiltersViewController.swift */; };
 		397F7FB6250382F20064E61E /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397F7FB4250382F20064E61E /* FiltersViewController.xib */; };
 		397F7FB8250384180064E61E /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F7FB7250384180064E61E /* FiltersDataModel.swift */; };
@@ -30,7 +29,6 @@
 		09C05788233D5DC7C04F7751 /* Pods_TestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1134104364A6BFD2CAB45EB2 /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
 		390BB909250A419400B7ECC8 /* NSError+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+extension.swift"; sourceTree = "<group>"; };
-		397F7FB025028AE80064E61E /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		397F7FB3250382F20064E61E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		397F7FB4250382F20064E61E /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		397F7FB7250384180064E61E /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			children = (
 				39939FF32502846800915283 /* ApiManger.swift */,
 				39939FF52502848600915283 /* DataModel.swift */,
-				397F7FB025028AE80064E61E /* ImageManager.swift */,
 				397F7FB7250384180064E61E /* FiltersDataModel.swift */,
 				390BB909250A419400B7ECC8 /* NSError+extension.swift */,
 			);
@@ -300,7 +297,6 @@
 				39939FF62502848600915283 /* DataModel.swift in Sources */,
 				397F7FB5250382F20064E61E /* FiltersViewController.swift in Sources */,
 				39939FD3250271F300915283 /* AppDelegate.swift in Sources */,
-				397F7FB125028AE80064E61E /* ImageManager.swift in Sources */,
 				397F7FB8250384180064E61E /* FiltersDataModel.swift in Sources */,
 				397F7FBB25038EB20064E61E /* FiltersTableViewCell.swift in Sources */,
 				39939FF42502846800915283 /* ApiManger.swift in Sources */,

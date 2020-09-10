@@ -26,7 +26,7 @@ class CocktailsTableViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - Properties
     
-    var filters: Filters?
+    var cocktails: CocktailData?
     private var cocktailData: Cocktails?
     private var queryCategories: [APIManager.QueryCategories] = [.beer,.cocktail,.cocoa,.coffeeTea,.homemadeLiqueur,.milkFloatShake,.ordinaryDrink,.otherUnknown,.punchPartydrink,.shot,.softdrinkSoda]
     var rightButton: UIBarButtonItem?
@@ -74,15 +74,12 @@ class CocktailsTableViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
-    private func getImage(indexPath: IndexPath, imageURL: String?){
-        ImageLoader.shared.getImage(from: imageURL, completion: { [weak self] (image) in
-            DispatchQueue.main.async {
-                (self?.tableView.cellForRow(at: indexPath) as? CocktailsTableViewCell)?.cocktailImage.image = image
-            }
-        })
-    }
-    
     // MARK: - Table view data source
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? CocktailsTableViewCell else { return }
+        cell.cocktailImage.kf.cancelDownloadTask()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cocktailData?.drinks.count ?? Constants.numberOfRows
@@ -93,9 +90,8 @@ class CocktailsTableViewController: UIViewController, UITableViewDataSource, UIT
         guard let result = cocktailData?.drinks[indexPath.row] else { return UITableViewCell() }
         DispatchQueue.main.async {
             cell.cocktailName.text = result.strDrink
-            cell.cocktailImage.image = nil
         }
-        getImage(indexPath: indexPath, imageURL: result.strDrinkThumb)
+        cell.setup(with: cocktails ?? result)
         return cell
     }
 }
