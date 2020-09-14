@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		289B6C147E527D086363E833 /* Pods_TestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09C05788233D5DC7C04F7751 /* Pods_TestProject.framework */; };
 		390BB90A250A419400B7ECC8 /* NSError+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BB909250A419400B7ECC8 /* NSError+extension.swift */; };
+		390BB90E250BB87E00B7ECC8 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390BB90D250BB87E00B7ECC8 /* LoadingCell.swift */; };
 		397F7FB5250382F20064E61E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F7FB3250382F20064E61E /* FiltersViewController.swift */; };
 		397F7FB6250382F20064E61E /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 397F7FB4250382F20064E61E /* FiltersViewController.xib */; };
 		397F7FB8250384180064E61E /* FiltersDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397F7FB7250384180064E61E /* FiltersDataModel.swift */; };
@@ -29,6 +30,7 @@
 		09C05788233D5DC7C04F7751 /* Pods_TestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1134104364A6BFD2CAB45EB2 /* Pods-TestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProject.release.xcconfig"; path = "Target Support Files/Pods-TestProject/Pods-TestProject.release.xcconfig"; sourceTree = "<group>"; };
 		390BB909250A419400B7ECC8 /* NSError+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+extension.swift"; sourceTree = "<group>"; };
+		390BB90D250BB87E00B7ECC8 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		397F7FB3250382F20064E61E /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		397F7FB4250382F20064E61E /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		397F7FB7250384180064E61E /* FiltersDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersDataModel.swift; sourceTree = "<group>"; };
@@ -77,6 +79,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		390BB90B250BB86600B7ECC8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				390BB90C250BB86E00B7ECC8 /* Components */,
+				39939FE62502823400915283 /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		390BB90C250BB86E00B7ECC8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				390BB90D250BB87E00B7ECC8 /* LoadingCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		397F7FB2250382C90064E61E /* FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				39939FF22502844F00915283 /* Managers + Model */,
-				39939FE62502823400915283 /* ViewControllers */,
+				390BB90B250BB86600B7ECC8 /* UI */,
 				39939FE72502824800915283 /* Resourses */,
 			);
 			path = TestProject;
@@ -296,6 +315,7 @@
 				390BB90A250A419400B7ECC8 /* NSError+extension.swift in Sources */,
 				39939FF62502848600915283 /* DataModel.swift in Sources */,
 				397F7FB5250382F20064E61E /* FiltersViewController.swift in Sources */,
+				390BB90E250BB87E00B7ECC8 /* LoadingCell.swift in Sources */,
 				39939FD3250271F300915283 /* AppDelegate.swift in Sources */,
 				397F7FB8250384180064E61E /* FiltersDataModel.swift in Sources */,
 				397F7FBB25038EB20064E61E /* FiltersTableViewCell.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 final class Cocktails: Codable {
-    var drinks: [CocktailData]
+    var drinks: [CocktailData]?
 }
 
 final class CocktailData: Codable {

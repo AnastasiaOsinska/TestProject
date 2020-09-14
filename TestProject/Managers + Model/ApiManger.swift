@@ -62,7 +62,7 @@ class APIManager {
     func getCocktailsModel(queryCategories: [QueryCategories], completion: @escaping(_ result: Result<Cocktails, Error>) -> Void) {
         let url = URLs.cocktailsURL + URLs.filter
         var categoriesString = ""
-        let queryCategories: [QueryCategories] = [.ordinaryDrink]
+        //let queryCategories: [QueryCategories] = [.ordinaryDrink]
         for category in queryCategories {
             categoriesString += "\(category.rawValue),"
         }
@@ -72,7 +72,6 @@ class APIManager {
     }
     
     func getFiltersModel(completion: @escaping(_ result: Result<Filters, Error>) -> Void) {
-        cancelTasks()
         let url = URLs.filtersURL + URLs.list + URLs.value
         request(for: url, parameters: Constants.contentTypeAppJson, completion: completion)
     }
@@ -118,12 +117,6 @@ class APIManager {
     }
     
     // MARK: - Helpers
-    
-    private func cancelTasks() {
-        Alamofire.Session.default.session.getTasksWithCompletionHandler { (_, _, downloadData) in
-            downloadData.forEach { $0.cancel() }
-        }
-    }
     
     private func processResponse<T: Codable>(_ response: AFDataResponse<Data>) -> Result<T, Error> {
         let result: Result<T, Error> = self.dataDecoder(response.data)

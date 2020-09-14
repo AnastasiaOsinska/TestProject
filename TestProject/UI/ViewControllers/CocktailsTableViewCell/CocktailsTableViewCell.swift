@@ -9,27 +9,27 @@
 import UIKit
 
 class CocktailsTableViewCell: UITableViewCell {
-
+    
     // MARK: - Constants
     
     private struct Constants {
         static let standartAnimationDuration: Double = 0.4
         static let standartNumberOfLines = 3
         static let backgroundViewRadius: CGFloat = 10
-        static let placeholderImageName = "bitcoinPlaceholderImage"
+        static let placeholderImageName = "PlaceholderImage"
     }
     
-       // MARK: - IBOutlets
-
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var cocktailImage: UIImageView!
     @IBOutlet weak var cocktailName: UILabel!    
- 
+    
     // MARK: - Setup
-       
-       func setup(with model: CocktailData) {
+    
+    func setup(with model: CocktailData) {
         cocktailName.text = model.strDrink
         setupImage(with: model.strDrinkThumb)
-       }
+    }
     
     // MARK: - Private
     
